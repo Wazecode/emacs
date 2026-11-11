@@ -1,2 +1,2 @@
-(menu-bar-mode 0)
-
+(menu-bar-mode -1)
+(setq make-backup-files nil)
