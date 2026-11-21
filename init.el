@@ -7,8 +7,8 @@
 (add-to-list 'default-frame-alist '(undecorated . t))
 
 ;;Theme
-(load (expand-file-name "anti-zenburn-theme" user-emacs-directory))
-(load-theme 'anti-zenburn t)
+(load (expand-file-name "atom-one-dark-theme" user-emacs-directory))
+(load-theme 'atom-one-dark t)
 
 ;;no backup files
 (setq make-backup-files nil)
