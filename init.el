@@ -10,18 +10,10 @@
 (load (expand-file-name "anti-zenburn-theme" user-emacs-directory))
 (load-theme 'anti-zenburn t)
 
+;;no backup files
 (setq make-backup-files nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("7a6dfa7a15cdf67f18825f790b2666145246e275337f5bc2b90552a70b1a4c82"
-     default)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+;; Move Customize settings out of init.el
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
