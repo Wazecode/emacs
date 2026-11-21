@@ -18,7 +18,16 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+(global-hl-line-mode 1)
+
 ;; Add Melpa packages
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
+
+;; Web-Mode
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.astro\\'" . web-mode))
