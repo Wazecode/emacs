@@ -10,6 +10,9 @@
 (load (expand-file-name "atom-one-dark-theme" user-emacs-directory))
 (load-theme 'atom-one-dark t)
 
+;;Font
+(set-frame-font "IosevkaNerdFont 12" nil t)
+
 ;;no backup files
 (setq make-backup-files nil)
 
