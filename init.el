@@ -1,17 +1,25 @@
 ;; -*- lexical-binding: t; -*-
 
+;; MacOs
+(if (string-equal system-type "darwin")
+    (load (expand-file-name "darwin" user-emacs-directory))
+  (set-frame-font "IosevkaNerdFont 12" nil t)
+  )
 ;; Remove UI
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 (add-to-list 'default-frame-alist '(undecorated . t))
 
+;;Full screen by default
+(push '(fullscreen . maximized) default-frame-alist)
+
 ;;Theme
 (load (expand-file-name "atom-one-dark-theme" user-emacs-directory))
 (load-theme 'atom-one-dark t)
 
 ;;Font
-(set-frame-font "IosevkaNerdFont 12" nil t)
+
 
 ;;no backup files
 (setq make-backup-files nil)
